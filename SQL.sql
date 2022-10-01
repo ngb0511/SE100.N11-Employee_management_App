@@ -1,0 +1,109 @@
+CREATE DATABASE QLNV
+
+CREATE TABLE NHANVIEN
+(
+	MANV char(4) primary key,
+	HOTEN Nvarchar(50),
+	NGSINH smalldatetime,
+	DCHI Nvarchar(50),
+	GTINH Nchar(4),
+	LUONGCOBAN money,
+	TRINHDO Nvarchar(30),
+	MAPHG char(5)
+)
+
+CREATE TABLE PHONGBAN
+(
+	MAPHG char(5) primary key,
+	TENPHG Nvarchar(50),
+	NGTL smalldatetime
+)
+
+
+CREATE TABLE NHANSU
+(
+	MANV char(4),
+	MAPHG char(5),
+	CONSTRAINT PK_NHANSU primary key (MANV,MAPHG),
+	CHUCVU char(4),
+	NGVL smalldatetime
+)
+
+CREATE TABLE DEAN
+(
+	MADA char(10) primary key,
+	MAPHG char(5),
+	TENDA Nvarchar(100),
+	NGBD smalldatetime,
+	NGKT smalldatetime
+)
+
+CREATE TABLE PHANCONG
+(
+	MANV char(4),
+	MADA char(10),
+	CONSTRAINT PK_PHANCONG primary key (MANV,MADA),
+	THOIGIAN smalldatetime
+)
+CREATE TABLE CHAMCONG
+(
+	MACC char(4),
+	MANV char(4),
+	THANG int,
+	NAM int,
+	SONGAY int
+)
+CREATE TABLE KHENTHUONG
+(
+	MAKT char(4),
+	MANV char(4),
+	THANG int,
+	NAM int,
+	CONSTRAINT PK_PHANCONG primary key (MANV,THANG,NAM),
+	LYDO NVARCHAR(40)
+)
+CREATE TABLE KYLUAT
+(
+	MAKL char(4),
+	MANV char(4),
+	THANG int,
+	NAM int,
+	CONSTRAINT PK_PHANCONG primary key (MANV,THANG,NAM),
+	LYDO NVARCHAR(40)
+)
+CREATE TABLE LUONG
+(
+	MACC char(4),
+MAKT char(4),
+MAKL char(4),
+	MANV char(4),
+	THANG int,
+	NAM int,
+	CONSTRAINT PK_PHANCONG primary key (MANV,MACC),
+	LUONG money,
+)
+
+CREATE TABLE TAIKHOAN
+(
+	MATK INT IDENTITY(1,1) PRIMARY KEY,
+	MALOAITK INT,
+	TENCHUTAIKHOAN NVARCHAR(20),
+	TENDANGNHAP VARCHAR(20),
+	MATKHAU VARCHAR(90),
+)
+
+CREATE TABLE PHANLOAITAIKHOAN
+(
+	MALOAITK INT IDENTITY(1,1) PRIMARY KEY,
+	TENLOAITK NVARCHAR(20),
+	QUYENHAN NVARCHAR(50)
+)
+
+CREATE TABLE THAMSO
+(
+	MATHAMSO VARCHAR(5) PRIMARY KEY,
+	TENTHAMSO NVARCHAR(20),
+	GIATRI FLOAT
+)
+
+
