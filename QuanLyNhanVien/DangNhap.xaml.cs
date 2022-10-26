@@ -1,4 +1,6 @@
-﻿using System;
+﻿using BUS;
+using DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +21,7 @@ namespace QuanLyNhanVien
     /// </summary>
     public partial class DangNhap : Window
     {
+        BUS_TAIKHOAN tk = new BUS_TAIKHOAN();
         public DangNhap()
         {
             InitializeComponent();
@@ -26,9 +29,16 @@ namespace QuanLyNhanVien
 
         private void btnDangNhap_Click(object sender, RoutedEventArgs e)
         {
-            TrangChu trangChu = new TrangChu();
-            trangChu.Show();
-            this.Hide();
+            DTO_TAIKHOAN dTO_TaiKhoan = new DTO_TAIKHOAN();
+            dTO_TaiKhoan._TENDANGNHAP = taiKhoanTbx.Text.ToString();
+            dTO_TaiKhoan._MATKHAU = matKhauPwb.Password.ToString();
+            if (tk.KiemTraTaiKhoan(dTO_TaiKhoan) == true)
+            {
+                TrangChu trangChu = new TrangChu();
+                trangChu.Show();
+                this.Hide();
+            }
+              
         }
 
         private void MinimizedButton_Click(object sender, RoutedEventArgs e)

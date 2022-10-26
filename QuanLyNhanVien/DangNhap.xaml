@@ -83,7 +83,7 @@
                         x:Name="tblUserName"/>
                 </TextBlock>
 
-                <TextBox Grid.Row="1"
+                <TextBox x:Name="taiKhoanTbx" Grid.Row="1"
                          Style="{StaticResource AccountBoxTheme}"
                          HorizontalAlignment="Center"
                          VerticalAlignment="Top"
@@ -98,7 +98,7 @@
                     </TextBox.Effect>
                 </TextBox>
 
-                <PasswordBox Grid.Row="2"
+                <PasswordBox x:Name="matKhauPwb" Grid.Row="2"
                              DataContext="Mật khẩu"
                              FontSize="15"
                              VerticalAlignment="Top"
