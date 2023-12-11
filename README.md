@@ -51,9 +51,6 @@ Phần mềm sử dụng Mô hình 3 layer, 3 tiers là mô hình kết nối đ
  - ## Môi trường cần thiết:
      -  Trình soạn thảo: Visual Studio
      -  Database: Microsoft SQL Server Management Studio
-     -  Quản lý tài khoản
-     -  Báo cáo, thống kê danh sách nhân viên theo từng yêu cầu
-     -  Thống kê khen thưởng, kỷ luật
  - ## Các bước cài đặt:
       -  Bước 1: Tạo database bằng file QLNV.sql
       -  Bước 2: Kết nối database với Visual Studio
