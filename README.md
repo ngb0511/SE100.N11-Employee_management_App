@@ -52,7 +52,7 @@ Môi trường cần thiết:
        - Trình soạn thảo: Visual Studio
        - Database: Microsoft SQL Server Management Studio
 Các bước cài đặt:
-       - Bước 1: Tạo database bằng file QLNV.sql      
+       - Bước 1: Tạo database bằng file QLNV.sql
        - Bước 2: Kết nối database với Visual Studio
        - Bước 3: Chỉnh sửa ConnectionString trong file .\src\DAL\KetNoi.cs
        - Bước 4: Build và Start Project
