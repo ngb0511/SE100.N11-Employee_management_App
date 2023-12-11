@@ -6,7 +6,7 @@
 
 ## Chức năng ứng dụng:
 
-- ## Quản lý công ty:
+ - ## Quản lý công ty:
      -  Quản lý thông tin nhân viên
      -  Quản lý thông tin phòng ban
      -  Quản lý tài khoản
@@ -48,14 +48,14 @@
 Phần mềm sử dụng Mô hình 3 layer, 3 tiers là mô hình kết nối đến CSDL thông qua các lớp: DTO, BUS và DAO.
 
 ## Hướng dẫn cài đặt:
-Môi trường cần thiết:
-     - Trình soạn thảo: Visual Studio
-     - Database: Microsoft SQL Server Management Studio
-Các bước cài đặt:
-     - Bước 1: Tạo database bằng file QLNV.sql
-     - Bước 2: Kết nối database với Visual Studio
-     - Bước 3: Chỉnh sửa ConnectionString trong file .\src\DAL\KetNoi.cs
-     - Bước 4: Build và Start Project
-
-
-  
+ - ## Môi trường cần thiết:
+     -  Trình soạn thảo: Visual Studio
+     -  Database: Microsoft SQL Server Management Studio
+     -  Quản lý tài khoản
+     -  Báo cáo, thống kê danh sách nhân viên theo từng yêu cầu
+     -  Thống kê khen thưởng, kỷ luật
+ - ## Các bước cài đặt:
+      -  Bước 1: Tạo database bằng file QLNV.sql
+      -  Bước 2: Kết nối database với Visual Studio
+      -  Bước 3: Chỉnh sửa ConnectionString trong file .\src\DAL\KetNoi.cs
+      -  Bước 4: Build và Start Project
